@@ -12,8 +12,6 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-//NzE0OTY1MTg4NjgzNzU5NzA3.XtL4oA.VayjQ51jcvpU4t1mm5B0EE_8yEw
-
 const prefix = require('./my_configs/bot_config.json').prefix;
 const d_key = require('./my_configs/secret_stuff.json')["d-key"];
 
