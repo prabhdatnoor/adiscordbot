@@ -2,6 +2,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -11,8 +12,9 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-const bot_config = require('./my_configs/bot_config.json');
-const prefix = bot_config['prefix'];
+
+const prefix = require('./my_configs/bot_config.json').prefix;
+const d_key = require('./my_configs/secret_stuff.json')["d-key"];
 
 const nicetry = ['yup', 'dude', 'wow', 'nice', 'cools', 'brouh', '50s'];
 
@@ -39,6 +41,6 @@ client.on('message', message => {
 
 });
 
-client.login('NzE0OTY1MTg4NjgzNzU5NzA3.Xs3ScQ.ZX6UsJ96Tzr1Qq7HIovvOw0iVCg');
+client.login(d_key);
 
-//https://discord.com/oauth2/authorize?client_id=714965188683759707&scope=bot&permissions=2146958847
+//invite-link : https://discord.com/oauth2/authorize?client_id=714965188683759707&scope=bot&permissions=2146958847
