@@ -3,9 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+
 
 client.commands = new Discord.Collection();
 
