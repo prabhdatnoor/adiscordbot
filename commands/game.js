@@ -15,7 +15,7 @@ module.exports = { //group,method,number
     name: 'game',
     description: '',
     execute(message, args) {
-        console.log('bruh1');
+        //console.log('bruh1');
         var method = args[0];
         var number = args[1];
 
@@ -24,7 +24,7 @@ module.exports = { //group,method,number
         if (members.length > 2) {
 
             if (method === undefined && number === undefined) {
-                console.log('MAIN');
+                //console.log('MAIN');
                 console.log(members);
                 members = byteams(members, undefined, sortleftovers, embedconv);
                 //return nice;
