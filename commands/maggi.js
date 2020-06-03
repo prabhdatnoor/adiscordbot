@@ -10,14 +10,14 @@ module.exports = {
             maggi.forEach(el => {
                     randmag.push(el.url);
                 })
-                //console.log(randmag);
+                //console.log(randmag.length);
 
             //var randmag_send = randmag[Math.floor(Math.random() * (randmag.length + 1))];
             //console.log(randmag_send);
 
             const embed = new Discord.MessageEmbed();
             embed.setColor('YELLOW').setTitle('Maggi 2 Minute Only');
-            embed.setImage(randmag[Math.floor(Math.random() * (randmag.length + 1))]);
+            embed.setImage(randmag[Math.floor(Math.random() * (randmag.length))]);
 
             message.channel.send(embed);
 
