@@ -9,7 +9,6 @@ module.exports = {
         (async() => {
             const response = await fetch('https://random-d.uk/api/random');
             const json = await response.json();
-            console.log(json);
             const embed = new Discord.MessageEmbed();
             embed.setColor(hexcode()).setTitle('Duck').setDescription('Boom!').setImage(json.url).setFooter(json.message);
 
