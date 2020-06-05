@@ -44,7 +44,7 @@ module.exports = { //group,method,number
                 .addFields(toEmbed(members));
 
             message.channel.send(embed);
-            console.log('sent teams');
+            //console.log('sent teams');
         } else {
             message.channel.send('need more than 2ppl fam');
         }
