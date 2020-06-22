@@ -7,31 +7,23 @@ module.exports = { //group,method,number
     name: 'dead',
     description: '',
     execute(message, args) {
-        //var members = deadbd(getMembers(message));
-        //console.log('here');
-        var members = toEmbed(deadbd(getMembers(message)));
+        var members = getMembers(message);
+        if (members > 2) {
+            emb_members = toEmbed(deadbd(members));
 
+            const embed = new Discord.MessageEmbed()
+                .setColor('#ff0000')
+                .setTitle('Dead By Daylight Game')
+                .setDescription('Killer is ' + emb_members.splice(0, 1)[0]['value']);
 
-        //console.log('yuppy');
-        //console.log(members);
-        //toEmbed(members);
-        //console.log('yesmayne');
-        //console.log(members.splice(0, 1));
+            if (emb_members.length > 0) {
+                embed.addFields(emb_members);
+            }
 
-        const embed = new Discord.MessageEmbed()
-            .setColor('#ff0000')
-            .setTitle('Dead By Daylight Game')
-            .setDescription('Killer is ' + members.splice(0, 1)[0]['value']);
-
-        //console.log('after embed');
-        //console.log(members);
-
-        if (members.length > 0) {
-            embed.addFields(members);
+            message.channel.send(embed);
+        } else {
+            message.channel.send("need more than 2 ppl fam");
         }
-
-        message.channel.send(embed);
-        //console.log('sent dead by daylight');
 
     }
 };
