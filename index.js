@@ -15,8 +15,8 @@ for (const file of commandFiles) {
 }
 
 const prefix = require('./my_configs/bot_config.json').prefix;
-const d_key = require('./my_configs/secret_stuff.json')["d-key"]; //use if hosting locally
-//const d_key = process.env.diskey; //for use with heroku
+//const d_key = require('./my_configs/secret_stuff.json')["d-key"]; //use if hosting locally
+const d_key = process.env.diskey; //for use with heroku
 //console.log(d_key);
 
 const nicetry = ['yup', 'dude', 'wow', 'nice', 'cools', 'brouh', '50s'];
