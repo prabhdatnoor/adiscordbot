@@ -1,5 +1,5 @@
 {
-    "version": "1.0",
+    "version": "1.0.0.1",
     "blips": {
         "positive": {
             "color": "GREEN",
@@ -22,7 +22,8 @@
                 "Outlook not so good.",
                 "No Sir.",
                 "Nope",
-                "Nah Veer"
+                "Nah Veer",
+                "Don't count on it."
             ]
         },
         "neutral": {
@@ -31,7 +32,6 @@
                 "Cannot predict now.",
                 "Concentrate and ask again.",
                 "Reply hazy try again.",
-                "Don't count on it.",
                 "Patani Veere",
                 "Ki Oye?"
             ]
