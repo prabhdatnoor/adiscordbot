@@ -4,7 +4,7 @@
         "convertembed": true
     },
     "byteam": {
-        "default #of teams": 2
+        "default_no_of_teams": 2
 
     },
     "bypergroup": {
