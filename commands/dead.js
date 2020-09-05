@@ -2,13 +2,20 @@ const shuffle = require('../my_functions/shuffle.js');
 const Discord = require('discord.js');
 const getMembers = require('../my_functions/getMembers.js');
 
-module.exports = { //group,method,number
+module.exports = {
     name: 'dead',
     description: '',
     aliases: ['deadbd', 'day'],
 
     execute(message, args) {
         var members = getMembers(message);
+
+        if (!members) {
+            return;
+        } else if (members.length < 2) {
+            message.channel.send('need atleast two ppl :(');
+            return;
+        }
 
         var killer, survivors, spectators;
 

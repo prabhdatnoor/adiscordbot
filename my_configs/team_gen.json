@@ -10,5 +10,6 @@
     "bypergroup": {
         "default #of pergroup": 3
 
-    }
+    },
+    "blips": ["Teams are Made!", "Here are teams!", "Fight!", "Groups", "Teams", "Here you go!"]
 }
