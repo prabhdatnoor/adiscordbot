@@ -4,11 +4,12 @@
         "convertembed": true
     },
     "byteam": {
-        "default #of teams": 2
+        "default_no_of_teams": 2
 
     },
     "bypergroup": {
         "default #of pergroup": 3
 
-    }
+    },
+    "blips": ["Teams are Made!", "Here are teams!", "Fight!", "Groups", "Teams", "Here you go!"]
 }

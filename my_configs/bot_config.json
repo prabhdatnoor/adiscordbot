@@ -1,1 +1,6 @@
-{ "prefix": "!" }
+{
+    "prefix": "!",
+    "settings": {
+        "filterbots": true
+    }
+}
