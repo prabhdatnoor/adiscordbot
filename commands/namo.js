@@ -5,11 +5,14 @@ const indcolors = ['#ff9933', '#FFFFFF', '#128807', '#000088'];
 
 module.exports = {
     name: "namo",
-    description: "kinda like 8ball but not really",
+    description: "Sends a random meme of Narendra Modi",
     aliases: ['india', 'modiji', 'modisabh', 'modi', 'modisab'],
     execute(message, args) {
         namo();
+
         async function namo() {
+
+		//using fetch api, get a response from 
 
             var response = await fetch('https://namo-memes.herokuapp.com/memes/1');
 
