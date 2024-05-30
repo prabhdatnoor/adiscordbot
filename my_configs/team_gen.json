@@ -1,0 +1,14 @@
+{
+    "main": {
+        "sortleftovers": true,
+        "convertembed": true
+    },
+    "byteam": {
+        "default #of teams": 2
+
+    },
+    "bypergroup": {
+        "default #of pergroup": 3
+
+    }
+}
