@@ -13,11 +13,11 @@ for (const file of commandFiles) {
 }
 
 const prefix = require('./my_configs/bot_config.json').prefix;
-const d_key = require('./my_configs/secret_stuff.json')["d-key"];
+//const d_key = require('./my_configs/secret_stuff.json')["d-key"]; use if hosting online
 
 console.log(d_key);
 if (d_key === undefined) {
-    d_key = process.env.diskey;
+    const d_key = process.env.diskey;
 }
 
 const nicetry = ['yup', 'dude', 'wow', 'nice', 'cools', 'brouh', '50s'];
