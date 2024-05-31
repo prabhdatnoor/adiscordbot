@@ -16,6 +16,10 @@ for (const file of commandFiles) {
 const prefix = require('./my_configs/bot_config.json').prefix;
 const d_key = require('./my_configs/secret_stuff.json')["d-key"];
 
+if (d_key === undefined) {
+    d_key = process.env.dis_key;
+}
+
 const nicetry = ['yup', 'dude', 'wow', 'nice', 'cools', 'brouh', '50s'];
 
 client.once('ready', () => {
