@@ -21,7 +21,7 @@ module.exports = { //group,method,number
         const embed = new Discord.MessageEmbed()
             .setColor('#ff0000')
             .setTitle('Dead By Daylight Game')
-            .setDescription('Killer is ' + members.splice(0, 1)[0]['value'])
+            .setDescription('Killer is ' + members.splice(0, 1)[0]['value']);
 
         //console.log('after embed');
         //console.log(members);
