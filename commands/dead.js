@@ -31,7 +31,7 @@ module.exports = { //group,method,number
         }
 
         message.channel.send(embed);
-        console.log('sent dead by daylight');
+        //console.log('sent dead by daylight');
 
     }
 };
@@ -40,7 +40,7 @@ module.exports = { //group,method,number
 
 function deadbd(members) {
     shuffle(members);
-    console.log('yo' + members);
+    //console.log('yo' + members);
     var game = [];
 
     game['killer'] = members.splice(0, 1);
