@@ -1,0 +1,21 @@
+{
+    "meme": {
+
+
+    },
+
+    "maggi": [
+        { "name": 1, "url": "https://i.ibb.co/Pjt3kNh/maggi1.jpg", "tag": "neymar" },
+        { "name": 2, "url": "https://i.ibb.co/P6nTxRL/maggi2.jpg", "tag": "meme" },
+        { "name": 3, "url": "https://i.ibb.co/0ngJyfV/maggi3.jpg", "tag": "meme" },
+        { "name": 4, "url": "https://i.ibb.co/3v17F64/maggi4.jpg", "tag": "meme" },
+        { "name": 5, "url": "https://i.ibb.co/D9gHMpf/maggi5.png", "tag": "meme" },
+        { "name": 6, "url": "https://i.ibb.co/Lhcq1b8/maggi6.jpg", "tag": "meme" },
+        { "name": 7, "url": "https://i.ibb.co/ZdVFpzV/maggi7.gif", "tag": "gif" },
+        { "name": 8, "url": "https://i.ibb.co/KV99KRt/maggi8.gif", "tag": "gif" },
+        { "name": 9, "url": "https://i.ibb.co/Bw3T5BW/maggi9.gif", "tag": "gif" },
+        { "name": 10, "url": "https://i.ibb.co/XJNfGQs/maggi10.jpg", "tag": "ad" },
+        { "name": 11, "url": "https://i.ibb.co/h1xFPm6/maggi11.jpg", "tag": "ad" },
+        { "name": 12, "url": "https://i.ibb.co/JCv6CMd/maggi12.jpg", "tag": "pack" }
+    ]
+}

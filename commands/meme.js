@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const hexcode = require('../my_functions/randhex.js');
+const assets = require('../my_configs/memelib.json');
 
 module.exports = {
     name: 'meme',
