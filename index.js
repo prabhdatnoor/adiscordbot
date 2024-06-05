@@ -27,7 +27,6 @@ client.once('ready', () => {
 
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
-    var date = new Date();
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
@@ -36,7 +35,7 @@ client.on('message', message => {
     if (!command) return;
     try {
         command.execute(message, args);
-        console.log('Sent ' + commandName);
+        console.log('Sent ' + commandName + '-->' + 'User:' + message.member.user.username + '||ID: ' + message.member.user.id);
     } catch (error) {
         console.error(error);
         message.channel.send('there was an error trying to execute that command!');
