@@ -15,12 +15,14 @@ module.exports = {
             rating = args[0] + ' is: ' + percent + '% Simp';
         }
 
-        if (percent < 20) {
+        if (percent <= 20) {
             comment = "Nice!";
-        } else if (percent > 90) {
+        } else if (percent >= 90) {
             comment = "Mega Simp";
-        } else if (percent > 20 || percent < 40) {
+        } else if (percent > 20 && percent < 50) {
             comment = "Hmmmm....";
+        } else if (percent >= 50 && percent < 90) {
+            comment = "Chiiilllll....";
         }
 
         const embed = new Discord.MessageEmbed();

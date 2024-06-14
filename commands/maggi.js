@@ -3,8 +3,9 @@ const Discord = require('discord.js');
 module.exports = {
     name: "maggi",
     description: "random maggi from assets",
+    aliases: 'maggie',
     execute(message, args) {
-        console.log(args[0] === undefined);
+        //console.log(args[0] === undefined);
         if (args[0] === undefined) {
             var randmag = [];
             maggi.forEach(el => {
