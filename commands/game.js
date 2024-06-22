@@ -14,6 +14,7 @@ const nice = [1, 2, 3, 4, 5, 6, 7];
 module.exports = { //group,method,number
     name: 'game',
     description: '',
+    aliases: ['teams', 'team'],
     execute(message, args) {
         //console.log('bruh1');
         var method = args[0];
