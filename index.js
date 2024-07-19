@@ -19,8 +19,6 @@ const prefix = require('./my_configs/bot_config.json').prefix;
 const d_key = process.env.diskey; //for use with heroku
 //console.log(d_key);
 
-const nicetry = ['yup', 'dude', 'wow', 'nice', 'cools', 'brouh', '50s'];
-
 client.once('ready', () => {
     console.log('Ready!');
 });
