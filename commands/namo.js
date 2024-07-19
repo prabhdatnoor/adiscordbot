@@ -6,7 +6,7 @@ const indcolors = ['#ff9933', '#FFFFFF', '#128807', '#000088'];
 module.exports = {
     name: "namo",
     description: "kinda like 8ball but not really",
-    aliases: ['india', 'modiji', 'modisabh', 'modi'],
+    aliases: ['india', 'modiji', 'modisabh', 'modi', 'modisab'],
     execute(message, args) {
         fetch('https://namo-memes.herokuapp.com/memes/1')
             .then((resp) => resp.json())
@@ -16,7 +16,7 @@ module.exports = {
                 //console.log(url);
                 const embed = new Discord.MessageEmbed();
                 var color = indcolors[Math.floor(Math.random() * indcolors.length)];
-                embed.setColor(color).setTitle('Modi Sab: The one and only')
+                embed.setColor(color).setTitle('Modi Sabh: The one and only')
                     .setImage(url).setFooter('Powered by: theIYD');
 
                 message.channel.send(embed);
