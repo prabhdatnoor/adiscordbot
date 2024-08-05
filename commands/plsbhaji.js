@@ -1,30 +1,21 @@
+const config = require('../my_configs/bhaji_config.json');
+const Discord = require('discord.js');
+
 module.exports = {
     name: "plsbhaji",
     description: "kinda like 8ball but not really",
-    aliases: ['plzbhaji', 'plspaji', 'plzpaji', 'plssir', 'plzsir', 'hello', 'bhaji', 'paji'],
+    aliases: config.aliases,
     execute(message, args) {
-        var blips = ["It is a possibility.",
-            "Definitely.",
-            "Probably.",
-            "Highly Likely.",
-            "Without a doubt.",
-            "Very doubtful.",
-            "Better not tell you know.",
-            "Cannot predict now.",
-            "Concentrate and ask again.",
-            "Outlook not so good.",
-            "You may rely on it.",
-            "It is certain.",
-            "As I see it, yes.",
-            "Yes Sir.",
-            "No Sir.",
-            "Reply hazy try again.",
-            "Don't count on it.",
-            "My sources say no.",
-            "Signs point to a yes.",
-            "Yeah sure."
-        ];
-        message.channel.send("work in progress!");
+
+        var category = config.blips[Object.keys(config.blips)[Math.floor(Math.random() * 3)]];
+
+
+        var embed = new Discord.MessageEmbed()
+            .setColor(category.color)
+            .setTitle('22G says:')
+            .setDescription(category.text[Math.floor(Math.random() * category.text.length)]);
+
+        message.channel.send(embed);
 
     }
 }

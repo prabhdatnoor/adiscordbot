@@ -1,0 +1,48 @@
+{
+    "version": "1.0",
+    "blips": {
+        "positive": {
+            "color": "GREEN",
+            "text": ["It is a possibility.",
+                "Definitely.",
+                "Probably.",
+                "Highly Likely.",
+                "Without a doubt.",
+                "You may rely on it.",
+                "It is certain.",
+                "As I see it, yes.",
+                "Yes Sir.",
+                "Hanji",
+                "Pakka Veere"
+            ]
+        },
+        "negative": {
+            "color": "RED",
+            "text": ["Very doubtful.",
+                "Outlook not so good.",
+                "No Sir.",
+                "Nope",
+                "Nah Veer"
+            ]
+        },
+        "neutral": {
+            "color": "YELLOW",
+            "text": ["Better not tell you know.",
+                "Cannot predict now.",
+                "Concentrate and ask again.",
+                "Reply hazy try again.",
+                "Don't count on it.",
+                "Patani Veere",
+                "Ki Oye?"
+            ]
+        }
+    },
+
+    "aliases": ["plzbhaji",
+        "plspaji", "plzpaji",
+        "plssir", "plzsir",
+        "hello", "bhaji",
+        "paji", "pls",
+        "plz"
+    ]
+}
