@@ -1,5 +1,4 @@
 const percentgen = require('../my_functions/percentgen.js');
-const toEmbed = require('../my_functions/toEmbed.js');
 const hexcode = require('../my_functions/randhex.js');
 const Discord = require('discord.js');
 
