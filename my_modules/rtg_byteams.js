@@ -1,64 +1,70 @@
+const Discord = require('discord.js');
+//var j = ['bruh', 'yes', 'okay', 'jheez', 'bama', 'dolores', 'julian', 'b', 'a', 'b', '1'];
 const shuffle = require('../my_functions/shuffle.js');
-//const embedsend = require('../my_functions/rtg_to_embed.js');
+const getMembers = require('../my_functions/getMembers.js');
+const game_config = require('../my_configs/team_gen.json');
+const toEmbed = game_config.main.convertembed;
+const lsort = game_config.main.sortleftovers;
 
-const group_nos = parseInt('2');
-const nice = [1, 2, 3, 4, 5, 6];
-shuffle(nice);
-var niced = output_group(nice, group_nos, true);
-//console.log(niced);
+module.exports = function(message, teams) {
 
-module.exports = (array, group_nos_input, sort_leftover) => {
-    parseInt(group_nos_input);
-    var teams;
+    var members = getMembers(message);
 
-    //console.log(group_nos_input);
-    //console.log(sort_leftover);
-    //console.log(embed);
-
-    //console.log('input teams' + array);
-
-    if (group_nos_input !== group_nos && group_nos_input !== undefined) {
-        //console.log('teams before output' + array);
-        teams = output_group(array, group_nos_input, sort_leftover);
-    } else {
-        //console.log('hi' + array);
-        // console.log('teams2 ' + teams);
-        teams = output_group(array, group_nos, sort_leftover);
-        //console.log('teams3 ' + teams);
+    if (!members) {
+        return;
+    } else if (members.length >= 2) {
+        return byteams(members, teams, toEmbed, lsort);
     }
 
+    return '<2';
 
-    return teams;
-
-
-};
+}
 
 
-function output_group(array, groups, sort_leftover) {
-    shuffle(array);
-    var string_out = [];
+function byteams(people, teams, isEmbed, sortleftover) {
 
-    ppl_per_group = Math.floor(array.length / groups); //3
+    var ppl_per_team = Math.floor(people.length / teams);
 
-    var leftover = array.length % groups;
+    var leftover = people.length % teams;
 
-    for (var ind = 0; ind < groups; ind++) { //create group nos
-        string_out["Group " + (ind + 1)] = array.slice(ppl_per_group * ind, (ppl_per_group * (ind + 1)));
-        //slice array from gs * 0 to gs*0+1 and so on. 
+    shuffle(people);
+
+    var output = {};
+
+    for (var i = 0; i < teams; i++) {
+        output['Team ' + (i + 1)] = people.splice(0, ppl_per_team);
     }
 
-    if (leftover !== 0 && sort_leftover === true) {
+    if (sortleftover === true) {
+        var i = 0;
+        do {
 
-        var lef_loop_check = 0;
-        for (var i = 0; i < leftover; i++) {
-            lef_loop_check++;
+            output['Team ' + (i + 1)].push(people[i]);
 
-            if (lef_loop_check > leftover) { break };
-            if (i >= groups) { i = 0; }
-            //i>group nos index, needs to be reset when =0
-            string_out["Group " + (i + 1)].push(array[(array.length - leftover + lef_loop_check - 1)]);
+            i++;
         }
 
+        while (i < (teams - 1) && leftover > 0);
     }
-    return string_out;
+
+    if (isEmbed === true) {
+        return DisEmbed(output);
+    } else {
+        return output;
+    }
+
+}
+
+function DisEmbed(teams) {
+
+    var emb_out = [];
+
+    var no_of_teams = Object.keys(teams).length;
+
+    for (var i = 0; i < no_of_teams; i++) {
+
+        emb_out[i] = { name: Object.keys(teams)[i], value: Object.values(teams)[i], inline: true };
+    }
+
+    return emb_out;
 }

@@ -35,6 +35,13 @@
                 "Patani Veere",
                 "Ki Oye?"
             ]
+        },
+        "NoResponse": {
+            "color": "BLUE",
+            "text": ["But like what are you trying to ask?",
+                "Ki Oye?",
+                "Imagine not even posing me a question when you try that command"
+            ]
         }
     },
 
