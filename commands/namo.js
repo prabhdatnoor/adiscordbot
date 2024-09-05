@@ -31,6 +31,7 @@ module.exports = {
                 .setImage(image).setFooter('Powered by: theIYDeid');
 
             message.channel.send(embed);
+            return;
         }
     }
 };
