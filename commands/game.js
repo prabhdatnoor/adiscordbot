@@ -13,16 +13,17 @@ module.exports = {
     aliases: ['teams', 'team', 'groups', 'group', 'rtg'],
     execute(message, args) {
 
-        console.log('gametime');
-
+	//get teams from the voice channel the person who sent
+	//the message is in
         var teams = byteams(message, dTeams);
 
-        if (!teams) {
+        if (!teams) {//if there is no one in channel, do nothing
             return;
         } else if (teams === '<2') {
             message.channel.send('Need atleast 2 ppl');
         }
-
+	
+	//send the embed message
         var embed = new Discord.MessageEmbed()
             .addFields(teams)
             .setTitle(blips[Math.floor(Math.random() * blips.length)])
